@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Task from "./Task"
 import {useState, useEffect} from 'react'
 
 export default function App() {
@@ -9,11 +10,11 @@ export default function App() {
     .then(response => response.json())
     .then(data => setData(data))
   },[])
-  console.log(Data)
   return (
     <>
-      {Data.map((item, i)=>{
-        
+      <h1>yes</h1>
+      {Object.entries(Data).map((item, i)=>{
+        return <Task key={i} info={item}></Task>
       })}
     </>
   );
