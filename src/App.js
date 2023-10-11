@@ -10,9 +10,7 @@ export default function App() {
     fetch("https://jsonplaceholder.typicode.com/todos")
     .then(response => response.json())
     .then((data) => {
-      console.log(data)
       //Checking localstorage
-
       if (typeof localStorage['data'] !==  'undefined') {
         //is defined
         data = JSON.parse(localStorage.getItem('data'))

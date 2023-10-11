@@ -6,7 +6,6 @@ export default function Task(params) {
     setCompleted(!Completed)
     const Data = JSON.parse(localStorage.getItem('data'))
     Data[event.target.value].completed = !Completed
-    console.log(Data[event.target.value])
     localStorage.setItem('data', JSON.stringify(Data))
   }
     return (
