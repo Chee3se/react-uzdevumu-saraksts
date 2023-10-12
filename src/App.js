@@ -21,7 +21,8 @@ export default function App() {
       }
       //Final
       setData(data)
-  })},[])
+    })
+  })
   function handleClick(event) {
     setShown(Shown !== 200 ? Shown + 10 : Shown)
   }

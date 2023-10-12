@@ -43,6 +43,7 @@ input[type="checkbox"]:checked + span::before {
 /*-----Everything else------*/
 .task {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
   display: flex;
   flex-direction: row;
   /*justify-content: center;*/
@@ -51,9 +52,16 @@ input[type="checkbox"]:checked + span::before {
   font-weight: bold;
   margin-bottom: 10px;
 }
+.task>input {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
 .task>div {
   margin-left: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   display: flex;
   position: absolute;
   flex-direction: row;
