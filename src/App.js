@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Task from "./Task"
+import Add from "./Add"
 
 export default function App() {
   const [Data, setData] = useState("")
@@ -26,6 +27,7 @@ export default function App() {
   }
   return (
     <>
+      <Add />
       {Object.entries(Data).map((item, i)=>{
         return i < Shown ? <Task key={i} info={item}></Task> : null
       })}
