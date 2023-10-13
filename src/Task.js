@@ -1,4 +1,5 @@
 import React, {useState} from 'react'; 
+import styles from "./Task.module.css"
 
 export default function Task(params) {
     const [Completed, setCompleted] = useState(params.info[1].completed)
@@ -40,13 +41,13 @@ export default function Task(params) {
     }
 
     return (
-      <div className="task">
+      <div className={styles.task}>
         <div>
           <img src="person.svg" alt="person"/>
           <p>{params.info[1].userId}</p> 
         </div>
         <label htmlFor={params.info[1].id}>
-          <input id={params.info[1].id} type="checkbox" name="completed" value={(params.info[1].id)-1} checked={params.info[1].completed} onChange={handleChange}/>
+          <input className={styles.checkbox} id={params.info[1].id} type="checkbox" name="completed" value={(params.info[1].id)-1} checked={Completed} onChange={handleChange}/>
           <span></span>
         </label>
         <p id={"p"+params.info[1].id} onClick={handleClick}>{params.info[1].title}</p>

@@ -14,7 +14,8 @@ export default function Add() {
         for (let index = 0; index < Data.length; index++) {
             Data[index].id += 1;
         }
-        Data.unshift({"userId":userId,"id":1,"title":text,"completed":false})
+        let info = {"userId":userId,"id":1,"title":text,"completed":false}
+        Data.unshift(info)
         //Saving the data
         localStorage.setItem('data', JSON.stringify(Data))
     }

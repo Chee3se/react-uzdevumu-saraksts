@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import styles from "./App.module.css"
 import Task from "./Task"
 import Add from "./Add"
 
@@ -29,10 +29,12 @@ export default function App() {
   return (
     <>
       <Add />
+      <div id="task-container">
       {Object.entries(Data).map((item, i)=>{
         return i < Shown ? <Task key={i} info={item}></Task> : null
       })}
-      <button className='controller' onClick={handleClick}>show more</button>
+      </div>
+      <button className={styles.controller} onClick={handleClick}>show more</button>
     </>
   );
 }
